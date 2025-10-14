@@ -5,7 +5,7 @@
 
 El archivo equipamientos_educativos.csv es un conjunto de datos plano que utiliza el **tabulador** como carácter delimitador.
 
-A continuación, se detalla la estructura del *dataset* (columnas, tipo de dato inferido y descripción):
+Estructura de los datos (columnas, tipo de dato inferido y descripción):
 
 | Columna | Tipo de Dato Inferido | Descripción |
 | :--- | :--- | :--- |
