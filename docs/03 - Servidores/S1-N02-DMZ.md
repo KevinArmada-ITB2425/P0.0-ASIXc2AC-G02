@@ -30,21 +30,21 @@ La configuración detallada de cada servicio se encuentra en la carpeta **`confi
 - **Puertos:** 80 (HTTP), 443 (HTTPS)
 - **DocumentRoot:** `/var/www/html`
 - **Módulos PHP clave:** `php-mysql`, `libapache2-mod-php`
-- **Documentación específica:** [Ver `configuraciones/web.md`](../configs/web.md)
+- **Documentación específica:** [Ver `configuraciones/web.md`](../04-configuraciones/web.md)
 
 ### 2. Servidor FTP (vsftpd)
 - **Puertos:** 21 (Control), 20 (Data)
 - **Puertos Pasivos:** 10000-10100
 - **Modo:** `chroot` habilitado
-- **Documentación específica:** [Ver `configuraciones/ftp.md`](../configs/ftp.md)
+- **Documentación específica:** [Ver `configuraciones/ftp.md`](../04-configuraciones/ftp.md)
 
 ### 3. Acceso Remoto (SSH)
 - **Puerto:** 22
-- **Documentación específica:** [Ver `configuraciones/router.md`](../configs/router.md)
+- **Documentación específica:** [Ver `configuraciones/router.md`](../04-configuraciones/router.md)
 
 ### 4. Conectividad y Red
 - **Archivo de Configuración:** `/etc/netplan/00-installer-config.yaml`
-- **Documentación específica:** [Ver `configuraciones/router.md`](../configs/router.md)
+- **Documentación específica:** [Ver `configuraciones/router.md`]()
 
 ---
 
