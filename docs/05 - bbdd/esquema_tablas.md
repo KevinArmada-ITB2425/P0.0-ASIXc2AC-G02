@@ -1,7 +1,7 @@
 
 ***
 
-# 📊 Análisis CSV: Estructura de: equipamientos_educativos.csv 📚
+# 📊 Análisis CSV: Estructura de: equipamientos_educativos.csv 
 
 El archivo equipamientos_educativos.csv es un conjunto de datos plano que utiliza el **tabulador** como carácter delimitador.
 
