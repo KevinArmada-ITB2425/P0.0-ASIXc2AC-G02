@@ -23,3 +23,17 @@ El router se encarga de:
 📄 **Archivo:** `/etc/netplan/00-installer-config.yaml`
 
 ![Netplan de R-02](/imagenes/Netplan_R-02.webp)
+
+
+## 3. Comandos Utilizados (IP Tables)
+![Netplan de R-02](/imagenes/netfilter_R-02.webp)
+
+Lo que hace el comando es para guardar las reglas actuales de el firewall para que sean persistentes
+
+![Syslog.conf R-02](/imagenes/R-02_syslog.conf.png)
+
+el comando para entrar al fichero es `sudo nano /etc/sysctl.conf` y veremos que estaria comentado `net.ipv4.ip_forward=1` y lo tenemos que descomentar
+
+![ip tables R-02](/imagenes/iptables_R-02.webp)
+
+este comando configura la traducción de direcciones de red (NAT) en tu router para dar salida a Internet a tus redes privadas
