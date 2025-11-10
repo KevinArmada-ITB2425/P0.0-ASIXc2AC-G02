@@ -1,8 +1,8 @@
 # Descripcion de la topologia
 # Topología de Red - Proyecto P0.0
-**Proyecto:** P0.0-ASIXc2gC-Gnn  
+**Proyecto:** P0.0-ASIXc2g2-G02  
 **Router:** R-N02  
-**Fecha:** [Tu fecha]
+**Fecha:** 10/11/2025
 
 ---
 
