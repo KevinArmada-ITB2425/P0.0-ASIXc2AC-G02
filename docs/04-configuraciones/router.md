@@ -37,3 +37,7 @@ el comando para entrar al fichero es `sudo nano /etc/sysctl.conf` y veremos que 
 ![ip tables R-02](/imagenes/iptables_R-02.webp)
 
 este comando configura la traducción de direcciones de red (NAT) en tu router para dar salida a Internet a tus redes privadas
+
+![R-02 Output y Forward](/imagenes/R-02_Output_Forward.webp)
+
+estos comandos establecen la política de seguridad estricta para tu Router R-N02: Todo el tráfico de entrada y cruce está prohibido a menos que se defina una excepción
