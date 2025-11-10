@@ -11,7 +11,7 @@
 
 | Red       | Rango de Red   | Máscara        | Gateway       | Servicios / Propósito                  |
 |-----------|---------------|----------------|---------------|---------------------------------------|
-| DMZ       | 192.168.2.0   | 255.255.255.0  | 192.168.2.1   | Web Server, FTP, SSH                   |
+| DMZ       | 192.168.120.0   | 255.255.255.0  | 192.168.2.1   | Web Server, FTP, SSH                   |
 | Intranet  | 192.168.20.0  | 255.255.255.0  | 192.168.20.1  | MySQL, DNS, DHCP, Monitor de red       |
 | Clientes  | 10.0.0.0      | 255.255.255.0  | 10.0.0.1      | Red de usuarios                        |
 
@@ -43,8 +43,8 @@
 
 | Red       | Hostname / Equipo      | IP           | Máscara        | Gateway       | Tipo IP | Servicios / Observaciones               |
 |-----------|----------------------|--------------|----------------|---------------|---------|----------------------------------------|
-| DMZ       | R-N02 (Router)       | 192.168.2.1  | 255.255.255.0  | –             | Fija     | Gateway DMZ                             |
-|           | S1-N02               | 192.168.2.2  | 255.255.255.0  | 192.168.2.1   | Fija     | Web, FTP, SSH                           |
+| DMZ       | R-N02 (Router)       | 192.168.120.1  | 255.255.255.0  | –             | Fija     | Gateway DMZ                             |
+|           | S1-N02               | 192.168.120.2  | 255.255.255.0  | 192.168.2.1   | Fija     | Web, FTP, SSH                           |
 | Intranet  | R-N02 (Router)       | 192.168.20.1 | 255.255.255.0  | –             | Fija     | Gateway Intranet                        |
 |           | S2-N02               | 192.168.20.2 | 255.255.255.0  | 192.168.20.1  | Fija     | MySQL, DNS, DHCP, Monitor               |
 | Clientes  | R-N02 (Router)       | 10.0.0.1     | 255.255.255.0  | –             | Fija     | Gateway Clientes                         |
