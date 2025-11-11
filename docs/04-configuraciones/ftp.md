@@ -1,6 +1,6 @@
 # 📁 Configuración del Servidor FTP (vsftpd) - S1-N02 (DMZ)
 
-## 🧩 1. Resumen y Propósito
+##  1. Resumen y Propósito
 
 El servidor **S1-N02**, ubicado en la red **DMZ (192.168.2.0/24)**, ejecuta el servicio **vsftpd (Very Secure FTP Daemon)**.  
 Este servicio permite la **transferencia segura de archivos** hacia el servidor web para gestionar la aplicación y otros contenidos del proyecto.
@@ -17,9 +17,18 @@ Este servicio permite la **transferencia segura de archivos** hacia el servidor 
 
 ---
 
-## ⚙️ 2. Pasos de Instalación
+##  2. Pasos de Instalación
 ![Instalacion servicio vsftpd](/imagenes/instalar_vsftpd.png)
 ### Actualizar el sistema
-```bash
-sudo apt update
-sudo apt upgrade -y
+
+```sudo apt update```
+```sudo apt upgrade -y```
+
+##  3. Configuracion de FTP
+
+`sudo nano /etc/vsftpd.conf`
+
+Y en el archivo cambiemos la directivas 
+`anonymous_enable`: NO
+`local_enable`: YES
+`write_enable`: YES
