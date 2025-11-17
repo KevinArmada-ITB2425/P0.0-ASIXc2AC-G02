@@ -51,4 +51,5 @@ Y para comprobar el cliente con un ip a y netplan en dhcp tendria la siguiente i
 `sudo systemctl restart isc-dhcp-server`
 
 `sudo systemctl status bind9`
+
 ![Status Bind9](/imagenes/status_bind9.webp)
