@@ -9,32 +9,30 @@
 
 ## 1️⃣ Rangos de red definidos
 
-| Red        | Rango de Red   | Máscara        | Gateway      | Servicios / Propósito               |
-|------------|----------------|----------------|--------------|--------------------------------------|
-| DMZ        | 192.168.2.0    | 255.255.255.0 | 192.168.2.1 | Web Server, FTP, SSH                 |
-| Intranet   | 192.168.20.0   | 255.255.255.0 | 192.168.20.1 | MySQL, DNS, DHCP, Monitor de red     |
-| Clientes   | 10.0.0.0       | 255.255.255.0 | 10.0.0.1    | Red de usuarios                      |
+| Red        | Rango de Red   | Máscara        | Gateway      |
+|------------|----------------|----------------|--------------|
+| DMZ        | 192.168.20.0    | 255.255.255.0 | 192.168.20.1 |
+| Intranet   | 192.168.120.0   | 255.255.255.0 | 192.168.120.1 |
 
 ---
 
 ## 2️⃣ IP fijas asignadas a Router y Servidores
 
-| Red        | Hostname / Equipo          | IP / Máscara       | Gateway       | Tipo IP | Servicios / Observaciones                   |
-|------------|----------------------------|---------------------|---------------|---------|----------------------------------------------|
-| DMZ        | R-N02 (Router)             | 192.168.2.1/24      | –             | Fija    | Gateway DMZ                                   |
-|            | S1-N02 (Servidor Público)  | 192.168.2.2/24      | 192.168.2.1   | Fija    | HTTP/HTTPS, FTP, SSH                          |
-| Intranet   | R-N02 (Router)             | 192.168.20.1/24     | –             | Fija    | Gateway Intranet                              |
-|            | S2-N02 (Servidor Interno)  | 192.168.20.2/24     | 192.168.20.1  | Fija    | MySQL, DNS, DHCP, Monitor                     |
-| Clientes   | R-N02 (Router)             | 10.0.0.1/24         | –             | Fija    | Gateway Clientes                              |
+| Red        | Hostname / Equipo          | IP / Máscara                | Gateway       | Tipo IP | Servicios / Observaciones                     |
+|------------|----------------------------|-----------------------------|---------------|---------|-----------------------------------------------|
+| DMZ        | R-N02 (Router)             | 192.168.20.1/24             | –             | Fija    | DNS, DHCP                                     |
+|            | S1-N02 (Servidor Público)  | 192.168.20.2/24             | 192.168.20.1  | Fija    | HTTP/HTTPS, FTP, SSH                          |
+| BBDD       | S2-N02 (Servidor Interno)  | 192.168.20.5/24             | 192.168.20.1  | Fija    | MySQL, Monitor                                |
+| Intranet   | R-N02 (Router)             | 192.168.120.100 - 200/24    | 192.168.120.1 | Dinamica|                                               |
 
 ---
 
 ## 3️⃣ Configuración DHCP para Clientes
 
-| Red      | Equipo       | Rango IP               | Máscara        | Tipo  | Gateway  |
-|----------|--------------|------------------------|----------------|-------|-----------|
-| Clientes | PC-Windows   | 10.0.0.100–10.0.0.200  | 255.255.255.0 | DHCP  | 10.0.0.1 |
-| Clientes | PC-Linux     | 10.0.0.100–10.0.0.200  | 255.255.255.0 | DHCP  | 10.0.0.1 |
+| Red      | Equipo       | Rango IP                   | Máscara       | Tipo  | Gateway       |
+|----------|--------------|----------------------------|---------------|-------|---------------|
+| Clientes | PC-Windows   | 192.168.120.100-200        | 255.255.255.0 | DHCP  | 192.168.120.1 |
+| Clientes | PC-Linux     | 192.168.120.100-200        | 255.255.255.0 | DHCP  | 192.168.120.1 |
 
 **Servidor DHCP:** S2-N02 (192.168.20.2)  
 **DNS proporcionado por DHCP:** 192.168.20.2  

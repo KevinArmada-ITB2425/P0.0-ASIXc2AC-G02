@@ -49,4 +49,4 @@ La infraestructura está organizada de la siguiente manera:
   - Ubicado en la **Intranet** (`192.168.20.2`)  
   - Provee servicios esenciales internos:  
     - DNS  
-    - DHC
+    - DHCP
