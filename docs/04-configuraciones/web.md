@@ -14,12 +14,12 @@ Proporciona acceso **HTTP (puerto 80)** y **HTTPS (puerto 443)**, ejecutando apl
 | Componente | Versión / Detalle |
 |------------|------------------|
 | **Sistema Operativo** | Ubuntu Server 22.04 LTS |
-| **Servidor Web** | Apache2 |
-| **Lenguaje** | PHP 8.1 |
-| **Rol** | Web server (Frontend + Backend PHP) |
-| **Red** | DMZ – 192.168.2.0/24 |
-| **IP del servidor** | 192.168.2.10 |
-| **Puertos** | 80 (HTTP), 443 (HTTPS) |
+| **Servidor Web** | Apache2                      |
+| **Lenguaje** | PHP 8.1                          |
+| **Rol** | Web server (Frontend + Backend PHP)   |
+| **Red** | DMZ – 192.168.20.0/24                 |
+| **IP del servidor** | 192.168.20.2              |
+| **Puertos** | 80 (HTTP), 443 (HTTPS)            |
 
 ---
 

@@ -13,7 +13,7 @@ Este servicio permite la **transferencia segura de archivos** hacia el servidor 
 | Puerto de Datos | TCP/20 (activo) |
 | Puertos Pasivos | TCP/10000–10100 |
 | Usuario local | `bchecker` |
-| IP Servidor | `192.168.2.10` |
+| IP Servidor | `192.168.20.2` |
 
 ---
 

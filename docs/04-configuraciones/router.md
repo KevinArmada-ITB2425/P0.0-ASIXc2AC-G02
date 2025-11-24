@@ -6,9 +6,9 @@ El **Router R-N02** actúa como punto de conexión entre las tres redes principa
 
 | Interfaz | Red | Descripción |
 |-----------|-----|-------------|
-| **enp1s0** | WAN | Conexión hacia Internet o red externa. |
-| **enp2s0** | DMZ | Red intermedia para servidores públicos (Web, FTP). |
-| **enp3s0** | Clientes / Intranet | Red interna para equipos del aula o usuarios. |
+| **enp1s0** | WAN | Conexión hacia Internet o red externa.                        |
+| **enp2s0** | DMZ | Red intermedia para servidores públicos (Web, FTP).           |
+| **enp3s0** | Intranet | Red interna para equipos del aula o usuarios.            |
 
 El router se encarga de:
 - Distribuir tráfico entre redes.
@@ -32,12 +32,14 @@ Lo que hace el comando es para guardar las reglas actuales de el firewall para q
 
 ![Syslog.conf R-02](/imagenes/R-02_syslog.conf.png)
 
-el comando para entrar al fichero es `sudo nano /etc/sysctl.conf` y veremos que estaria comentado `net.ipv4.ip_forward=1` y lo tenemos que descomentar
+PENDIENTE A CAMBIAR 
 
-![ip tables R-02](/imagenes/iptables_R-02.webp)
+                                el comando para entrar al fichero es `sudo nano /etc/sysctl.conf` y veremos que estaria comentado `net.ipv4.ip_forward=1` y lo tenemos que descomentar
 
-este comando configura la traducción de direcciones de red (NAT) en tu router para dar salida a Internet a tus redes privadas
+                                ![ip tables R-02](#/imagenes/iptables_R-02.webp)
 
-![R-02 Output y Forward](/imagenes/R-02_Output_Forward.webp)
+                                este comando configura la traducción de direcciones de red (NAT) en tu router para dar salida a Internet a tus redes privadas
 
-estos comandos establecen la política de seguridad estricta para tu Router R-N02: Todo el tráfico de entrada y cruce está prohibido a menos que se defina una excepción
+                                ![R-02 Output y Forward](#/imagenes/R-02_Output_Forward.webp)
+
+                                estos comandos establecen la política de seguridad estricta para tu Router R-N02: Todo el tráfico de entrada y cruce está prohibido a menos que se defina una excepción

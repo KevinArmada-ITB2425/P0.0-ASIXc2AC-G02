@@ -16,9 +16,9 @@ El servidor **S1-N02** está ubicado en la zona **DMZ** y actúa como servidor d
 | :--- | :--- |
 | **Hostname** | S1-N02 |
 | **Sistema Operativo** | Ubuntu Server 22.04 LTS |
-| **Red** | DMZ (192.168.120.0/24) |
-| **IP** | 192.168.120.2/24 |
-| **DNS** | 8.8.8.8, 8.8.4.4 |
+| **Red** | DMZ (192.168.20.0/24) |
+| **IP** | 192.168.20.2/24        |
+| **GATEWAY** | 192.168.20.1      |
 
 ---
 
@@ -40,7 +40,7 @@ La configuración detallada de cada servicio se encuentra en la carpeta **`confi
 
 ### 3. Acceso Remoto (SSH)
 - **Puerto:** 22
-- **Documentación específica:** [Ver `configuraciones/router.md`](../04-configuraciones/router.md)
+- **Documentación específica:** `sudo apt install openssh-server`
 
 ### 4. Conectividad y Red
 - **Archivo de Configuración:** `/etc/netplan/00-installer-config.yaml`

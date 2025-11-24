@@ -15,6 +15,8 @@ sudo apt update
 ## 2. Instalar MySQL Server
 sudo apt install mysql-server
 
+![Status Mysql](/imagenes/SystemctlMysql.png)
+
 ```
 
 
@@ -31,6 +33,9 @@ Es esencial configurar UFW para proteger el servidor en la DMZ. Solo permitiremo
 ## Denegar todo el tráfico entrante por defecto
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
+
+![Firewall](/imagenes/UfwDefault.png)
+
 ```
 
 ### B. Reglas de acceso
@@ -47,6 +52,9 @@ sudo ufw enable
 
 ## Verificar el estado
 sudo ufw status numbered
+
+![ufw status](/imagenes/UfwStatus.png)
+
 ```
 
 ---
