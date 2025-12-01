@@ -2,10 +2,9 @@
 
 ## 🧾 Descripción General
 
-El servidor **S1-N02**, ubicado en la red **DMZ (`192.168.2.0/24`)**, aloja el **servicio web principal del proyecto P0.0-ASIXc2gC-Gnn**.  
-Proporciona acceso **HTTP (puerto 80)** y **HTTPS (puerto 443)**, ejecutando aplicaciones en **PHP** que se conectan a la base de datos alojada en la **Intranet (S2-N02)**.
+El servidor **S1-N02**, ubicado en la red **DMZ (`192.168.2.0/24`)**, aloja el **servicio web principal del proyecto P0.0-ASIXc2gC-G02**.  
+Proporciona acceso **HTTP (puerto 80)**, ejecutando aplicaciones en **PHP** que se conectan a la base de datos alojada en la **BBDD (S2-N02)**.
 
-> ⚠️ La **DMZ (Zona Desmilitarizada)** es una red intermedia entre Internet y la Intranet, utilizada para alojar servicios públicos como web, FTP, DNS o correo, accesibles desde el exterior sin comprometer la red interna.
 
 ---
 
@@ -19,7 +18,7 @@ Proporciona acceso **HTTP (puerto 80)** y **HTTPS (puerto 443)**, ejecutando apl
 | **Rol** | Web server (Frontend + Backend PHP)   |
 | **Red** | DMZ – 192.168.20.0/24                 |
 | **IP del servidor** | 192.168.20.2              |
-| **Puertos** | 80 (HTTP), 443 (HTTPS)            |
+| **Puertos** | 80 (HTTP)                         |
 
 ---
 
@@ -41,5 +40,5 @@ Proporciona acceso **HTTP (puerto 80)** y **HTTPS (puerto 443)**, ejecutando apl
 
 ![Verificación Apache y PHP funcionando](/imagenes/versiones_php_apache2.png)
 
-![Verificación Apache y PHP funcionando](/imagenes/apache_status.png)
+![Estado Apache y PHP funcionando](/imagenes/apache_status.png)
 

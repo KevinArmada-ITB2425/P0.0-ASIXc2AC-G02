@@ -6,15 +6,13 @@ El **Router R-N02** actúa como punto de conexión entre las tres redes principa
 
 | Interfaz | Red | Descripción |
 |-----------|-----|-------------|
-| **enp1s0** | WAN | Conexión hacia Internet o red externa.                        |
 | **enp2s0** | DMZ | Red intermedia para servidores públicos (Web, FTP).           |
-| **enp3s0** | Intranet | Red interna para equipos del aula o usuarios.            |
+| **enp3s0** | Intranet | Red interna para equipos clientes                        |
 
 El router se encarga de:
 - Distribuir tráfico entre redes.
 - Filtrar paquetes mediante **iptables**.
-- Aplicar **NAT (enmascaramiento)** para permitir salida a Internet.
-- Encaminamiento entre las tres subredes.
+- Encaminamiento entre las dos redes.
 
 ---
 
@@ -26,20 +24,15 @@ El router se encarga de:
 
 
 ## 3. Comandos Utilizados (IP Tables)
-![Netplan de R-02](/imagenes/netfilter_R-02.webp)
-
-Lo que hace el comando es para guardar las reglas actuales de el firewall para que sean persistentes
 
 ![Syslog.conf R-02](/imagenes/R-02_syslog.conf.png)
 
-PENDIENTE A CAMBIAR 
+Al habilitar el reenvío de IP, le indicas al sistema operativo que debe aceptar paquetes que no están destinados a sí mismo y que, en su lugar, debe reenviarlos a la red de destino apropiada.
 
-                                el comando para entrar al fichero es `sudo nano /etc/sysctl.conf` y veremos que estaria comentado `net.ipv4.ip_forward=1` y lo tenemos que descomentar
+![ip_tables](/imagenes/ip_tables.png)
 
-                                ![ip tables R-02](#/imagenes/iptables_R-02.webp)
+Este comando muestra las reglas que controlan el tráfico que intenta pasar a través de este servidor (reenvío de paquetes)
 
-                                este comando configura la traducción de direcciones de red (NAT) en tu router para dar salida a Internet a tus redes privadas
+![Netplan de R-02](/imagenes/netfilter_R-02.webp)
 
-                                ![R-02 Output y Forward](#/imagenes/R-02_Output_Forward.webp)
-
-                                estos comandos establecen la política de seguridad estricta para tu Router R-N02: Todo el tráfico de entrada y cruce está prohibido a menos que se defina una excepción
+Lo que hace el comando es para guardar las reglas actuales para que sean persistentes
