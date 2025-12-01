@@ -72,7 +72,7 @@ sudo mysql -u root -p
 
 
 ```sql
-CREATE USER 'bchecker'@'%' IDENTIFIED BY 'bchecker121';
+CREATE USER 'bchecker'@'192.168.20.2' IDENTIFIED BY 'bchecker121';
 ```
 
 ### C. Concesión de permisos
@@ -87,20 +87,20 @@ GRANT ALL PRIVILEGES ON datos_bcn_educacio.* TO 'bchecker'@'192.168.20.2';
 FLUSH PRIVILEGES;
 EXIT;
 ```
-
+![usuarios](/imagenes/usuarios_bbdd.webp)
 ---
 
 ## 4. 🚀 Conexión Remota del Compañero
 
-Tu compañero (`192.168.20.2`) debe usar la IP de tu servidor (`192.168.20.5`) para conectarse con el usuario `bchecker`.
+(`192.168.20.2`) tiene que usar la IP del servidor (`192.168.20.5`) para conectarse con el usuario `bchecker`.
 
 ### A. Comando de conexión
 
 ```bash
 mysql -h 192.168.20.5 -P 3306 -u bchecker -p
 ```
-
-Se solicitará la contraseña configurada.
+![login](/imagenes/LOGIN_bbdd.png)
+Se solicitará la contraseña.
 
 ### B. Uso de la base de datos
 
@@ -111,8 +111,8 @@ USE datos_bcn_educacio;
 ## Mostrar las tablas
 SHOW TABLES;
 
-## Consultar una tabla (ejemplo)
-SELECT * FROM equipaments_barcelona LIMIT 10;
+## Consultar una tabla
+SELECT * FROM equipaments_educacio LIMIT 10;
 ```
-
+![show tables](/imagenes/mostrar_tablas.png)
 ---
