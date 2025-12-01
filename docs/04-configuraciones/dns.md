@@ -51,7 +51,7 @@ Este servidor DNS (BIND) está configurado para resolver nombres de dominio inte
 
 ## ⚙️ 5. Comprobacion de Zona
 
-![archivo_.conf_local](/imagenes/db_G2_cat.png)
+![check zone](/imagenes/checkzone_g2.cat.png)
 
 El router permite el tráfico bidireccional entre las redes internas (DMZ y Intranet) usando iptables, mientras que el DNS resuelve nombres de host internos (G2.cat)
 
