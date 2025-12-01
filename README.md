@@ -18,14 +18,14 @@
 Desplegar una infraestructura completa con aplicación multicapa que incluya:
 
 * Servidor web
-* Monitor de redes
+* Router
 * SSH
 * Base de datos (MySQL)
 * DHCP
 * DNS
 * FTP
 
-El objetivo principal es **simular un entorno real de empresa**, aplicando buenas prácticas de segmentación de redes, seguridad y disponibilidad de servicios.
+El objetivo principal es **simular un entorno real de empresa**, aplicando buenas prácticas de segmentación de redes y disponibilidad de servicios.
 
 ---
 
@@ -39,20 +39,18 @@ El objetivo principal es **simular un entorno real de empresa**, aplicando buena
 
 ## 🏗️ Arquitectura y Justificación
 
-La infraestructura se ha diseñado con **tres redes segmentadas** conectadas a través de un router central (R-N02):
+La infraestructura se ha diseñado con **dos redes segmentadas** conectadas a través de un router central (R-N02):
 
-* **DMZ (Zona Desmilitarizada)** – Red intermedia para servidores accesibles desde Internet, como web, FTP y correo.  
-* **Intranet (Red Interna)** – Red privada para servicios críticos internos, como bases de datos, DNS y DHCP.  
-* **Clientes / NAT** – Red de usuarios finales que obtienen IP dinámica y acceso controlado.
+* **DMZ (Zona Desmilitarizada)** – Red intermedia para servidores accesibles desde Internet, como web, FTP y BBDD.  
+* **Intranet (Red Interna)** – Red privada para servicios a los clientes.  
 
 ### 🔹 Justificación de la Arquitectura
 
-1. **Seguridad**: La DMZ aísla los servicios públicos del resto de la red, evitando que un ataque externo comprometa la Intranet.  
+1. **Seguridad**: La DMZ aísla los servicios públicos del resto de la red, evitando un ataque externo.  
 2. **Escalabilidad**: Separar clientes y servidores internos permite añadir más servicios sin afectar la seguridad ni la disponibilidad.  
-3. **Control y monitorización**: El router R-N02 permite aplicar políticas de firewall, NAT y enrutamiento entre subredes.  
-4. **Realismo empresarial**: Esta arquitectura refleja la práctica habitual en entornos de producción donde se separan redes externas de internas.
+3. **Control**: El router R-N02 permite aplicar políticas de firewall, NAT y enrutamiento entre subredes.  
 
-> ⚠️ Elegimos esta arquitectura y no otra (por ejemplo, una red plana) porque **permite simular correctamente la interacción de servicios públicos y privados** con políticas de seguridad reales, y facilita la práctica de administración y monitorización de tráfico.
+> ⚠️ Elegimos esta arquitectura y no otra (por ejemplo, una red plana) porque **permite simular correctamente la interacción de servicios públicos y privados** con políticas de seguridad reales, y facilita la práctica de administración.
 
 ---
 
@@ -60,8 +58,8 @@ La infraestructura se ha diseñado con **tres redes segmentadas** conectadas a t
 
 El diagrama refleja la arquitectura seleccionada:
 
-* Router R-N02 conectando DMZ, Intranet y Clientes  
-* Servidores ubicados según su rol (Web/FTP en DMZ, DB/DHCP/DNS en Intranet)  
+* Router R-N02 conectando DMZ, Intranet
+* Servidores ubicados según su rol (Web/FTP/SSH en DMZ, DHCP y DNS en el Router y MySQL en Servidor base de datos)  
 * Clientes conectados a la red de usuarios con IP dinámica  
 
 > Este diagrama es **representativo y no redundante**, simplificando la comprensión sin perder detalle de la segmentación de redes y servicios críticos.
@@ -79,11 +77,46 @@ Usuario para comprobación en todos los sistemas:
 
 ## 📂 Estructura del Repositorio
 
-* `/docs/` – Documentación del proyecto  
-* `/scripts/` – Scripts de automatización  
-* `/app/` – Aplicación web  
-* `/data/` – Datos y copias de seguridad  
-* `/configs/` – Archivos de configuración y aplicación  
+---
+
+### **📁 /docs/**
+Contiene toda la documentación técnica del proyecto.
+
+#### **01 - Arquitectura**
+- `Diagrama_P0.0.drawio` → Diagrama general del sistema  
+- `esquema_ips.md` → Asignación completa de IPs  
+- `topologia.md` → Descripción de la topología lógica y física  
+
+#### **03 - Servidores**
+- `S1-N02-DMZ.md` → Documentación del servidor DMZ  
+- `S1-N02-INTRANET.md` → Documentación del servidor Intranet  
+
+#### **04 - configuraciones**
+Documentación detallada de cada servicio instalado:
+
+- `backups.md` → Sistema de copias de seguridad  
+- `bbdd.md` → Motor de bases de datos  
+- `dhcp.md` → Configuración del servidor DHCP (Router)  
+- `dns.md` → Configuración del servidor DNS (Router)  
+- `ftp.md` → Configuración del servidor FTP en DMZ  
+- `router.md` → NAT, forwarding e iptables del Router  
+- `web.md` → Servicio web en la DMZ (Apache/PHP)  
+
+#### **05 - bbdd**
+- `esquema_tablas.md` → Esquema relacional  
+
+---
+
+### **📁 /data/**
+Almacena datos y recursos del proyecto:
+
+- `/csv/` → Datos en formato CSV  
+- `equipamientos_educativos.csv` → Datos de ejemplo usados para poblar la base  
+
+---
+
+### **📁 /imagenes/**
+Imágenes utilizadas en la documentación (capturas, diagramas, etc.)
 
 ---
 
@@ -94,7 +127,3 @@ Usuario para comprobación en todos los sistemas:
 * **Sprint 3:** Integración y aplicación  
 
 ---
-
-## 📚 Documentación
-
-Ver la carpeta `/docs/` para la documentación detallada de cada componente y su configuración.

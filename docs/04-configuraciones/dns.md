@@ -28,3 +28,5 @@ Este DNS permite:
 ```bash
 sudo apt update
 sudo apt install bind9 bind9-utils bind9-dnsutils -y
+
+## ⚙️ 3. Instalación de Bind9
