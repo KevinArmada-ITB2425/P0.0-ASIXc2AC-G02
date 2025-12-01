@@ -100,6 +100,7 @@ EXIT;
 mysql -h 192.168.20.5 -P 3306 -u bchecker -p
 ```
 ![login](/imagenes/LOGIN_bbdd.png)
+
 Se solicitará la contraseña.
 
 ### B. Uso de la base de datos
