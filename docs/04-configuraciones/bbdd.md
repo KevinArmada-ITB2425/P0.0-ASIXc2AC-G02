@@ -15,9 +15,8 @@ sudo apt update
 ## 2. Instalar MySQL Server
 sudo apt install mysql-server
 
-![Status Mysql](/imagenes/SystemctlMysql.png)
-
 ```
+![Status Mysql](/imagenes/SystemctlMysql.png)
 
 
 
@@ -61,7 +60,7 @@ sudo ufw status numbered
 
 ## 3. 🧑‍💻 Configuración de Usuarios y Permisos en MySQL
 
-Se configurará el usuario **`bchecker`** con permisos sobre la base de datos `datos_bcn_educacio`.
+Usuario **`bchecker`** con permisos sobre la base de datos `datos_bcn_educacio`.
 
 ### A. Acceso a la consola de MySQL
 
@@ -71,10 +70,9 @@ sudo mysql -u root -p
 
 ### B. Creación del usuario `bchecker`
 
-Usa una contraseña fuerte para evitar el **ERROR 1819** (política de seguridad).
 
 ```sql
-CREATE USER 'bchecker'@'192.168.20.2' IDENTIFIED BY 'ContraseñaFuerte';
+CREATE USER 'bchecker'@'%' IDENTIFIED BY 'bchecker121';
 ```
 
 ### C. Concesión de permisos

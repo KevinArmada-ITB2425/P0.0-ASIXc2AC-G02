@@ -1,6 +1,6 @@
 # 📘 Tabla de Direccionamiento IP  
 **Proyecto:** P0.0-ASIXc2A-G02  
-**Equipo:** R-N02  
+**Equipo:** G02  
 **Arquitectura:** 2 Servidores (DMZ + Intranet)  
 **Fecha de creación:** 14/10/25  
 **Última actualización:** 14/10/25  
@@ -12,7 +12,7 @@
 | Red        | Rango de Red   | Máscara        | Gateway      |
 |------------|----------------|----------------|--------------|
 | DMZ        | 192.168.20.0    | 255.255.255.0 | 192.168.20.1 |
-| Intranet   | 192.168.120.0   | 255.255.255.0 | 192.168.120.1 |
+| Intranet   | 192.168.120.0   | 255.255.255.0 | 192.168.120.1|
 
 ---
 

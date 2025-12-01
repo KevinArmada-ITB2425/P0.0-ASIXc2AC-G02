@@ -8,7 +8,7 @@
 
 ## 🏗️ Arquitectura General
 
-El proyecto implementa una arquitectura de red **segmentada en 3 zonas independientes** para mejorar la seguridad, la escalabilidad y el control del tráfico:
+El proyecto implementa una arquitectura de red **segmentada en 2 zonas independientes** para mejorar la seguridad, la escalabilidad y el control del tráfico:
 
 1. **DMZ (Zona Desmilitarizada)** – `192.168.20.0/24`  
    - Aloja servicios públicos accesibles desde el exterior (HTTP/HTTPS, FTP, SSH, Monitorizacoin y MySQL).  
@@ -41,11 +41,10 @@ La infraestructura está organizada de la siguiente manera:
 
 - **Servidor Base de Datos (S2-N02)**  
   - Ubicado en la **DMZ** (`192.168.20.5`)  
-  - Provee servicios esenciales internos:  
-    - Monitoraje  
+  - Provee servicios esenciales internos:    
     - MySQL
 
-- **Routert (R-02)**  
+- **Router (R-02)**  
   - Ubicado en la **Intranet** (`192.168.20.1 - 192.168.120.1`)  
   - Provee servicios esenciales internos:  
     - DHCP  
